@@ -1,0 +1,20 @@
+SELECT 
+seas_id
+,season
+,player_id
+,player
+,pos
+,age
+,experience
+,lg
+,tm
+,g
+,mp
+,pg_percent
+,sg_percent
+,sf_percent
+,pf_percent
+,c_percent
+,bad_pass_turnover
+,lost_ball_turnover
+FROM `weighty-flux-428109-e5.Spurs_project.Player play by play 2014 2024`
