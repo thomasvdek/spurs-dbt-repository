@@ -48,6 +48,7 @@ TRANSLATE(
 ,season
 ,pos
 ,tm
+,experience
 ,ROUND((fg_per_36_min_ratio*fg_percent) + ast_per_36_min_ratio + stl_per_36_min_ratio + (x2p_per_36_min_ratio*x2p_percent) + (x3p_per_36_min_ratio*x3p_percent) - tov_per_36_min_ratio + pts_per_36_min_ratio + ft_per_36_min_ratio,2)  AS PG_global_stats
 ,ROUND((fg_per_36_min_ratio*fg_percent) + stl_per_36_min_ratio + (x2p_per_36_min_ratio*x2p_percent) + (x3p_per_36_min_ratio*x3p_percent) - tov_per_36_min_ratio + pts_per_36_min_ratio + ft_per_36_min_ratio,2)  AS SG_global_stats
 ,ROUND((fg_per_36_min_ratio*fg_percent) + blk_per_36_min_ratio + stl_per_36_min_ratio + (x2p_per_36_min_ratio*x2p_percent) + (x3p_per_36_min_ratio*x3p_percent) + trb_per_36_min_ratio + pts_per_36_min_ratio + ft_per_36_min_ratio,2)  AS SF_global_stats
