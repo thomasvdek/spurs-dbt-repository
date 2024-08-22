@@ -1,5 +1,12 @@
-player_36min_merged_final.sql
-{{ config( materialized='table')}}
+-- player_36min_merged_final.sql
+-- {{ config( materialized='table')}}
+
+    -- create or replace table `weighty-flux-428109-e5`.`dbt_spurs_`.`player_36min_merged_final`
+      
+
+    -- OPTIONS()
+    -- as (
+    --   player_36min_merged_final.sql
 
 SELECT
 Player
@@ -42,3 +49,5 @@ Player
 FROM {{ ref('player_36min_merged') }} AS p36m
 LEFT JOIN {{ ref('Salaries_NBA_players_cleaned') }} AS salaries
 USING(Player)
+
+    -- )
