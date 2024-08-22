@@ -1,10 +1,26 @@
-SELECT
-season,
-player,
-pos,
-tm,
-C_global_stats
-,RANK() OVER (ORDER BY C_global_stats DESC ) AS ranking_C
-FROM {{ ref('player_per_36_min_played_advanced_stats') }}
-WHERE pos LIKE 'C%' OR pos LIKE '%C'
-ORDER BY C_global_stats DESC
+select
+    season,
+    player,
+    pos,
+    tm,
+    c_global_stats,
+    rank() over (order by c_global_stats desc) as ranking_c,
+    fg_per_36_min,
+    fga_per_36_min,
+    fg_percent,
+    x3p_per_36_min,
+    x3p_percent,
+    x2p_percent,
+    ft_per_36_min,
+    orb_per_36_min,
+    drb_per_36_min,
+    trb_per_36_min,
+    ast_per_36_min,
+    stl_per_36_min,
+    blk_per_36_min,
+    tov_per_36_min,
+    pf_per_36_min,
+    pts_per_36_min
+from {{ ref("player_per_36_min_played_advanced_stats") }}
+where pos like 'C%' or pos like '%C'
+order by c_global_stats desc
