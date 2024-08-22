@@ -24,5 +24,5 @@ select
     pf_per_36_min,
     pts_per_36_min
 from {{ ref("player_per_36_min_played_advanced_stats") }}
-where pos like 'C%' or pos like '%C' 
+where (pos like 'C%' or pos like '%C') AND season = 2024 
 order by c_global_stats desc

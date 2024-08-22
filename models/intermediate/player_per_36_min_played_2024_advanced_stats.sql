@@ -1,3 +1,5 @@
+{{ config( materialized='table')}}
+
 WITH 
 calcul_ratio 
 AS (
@@ -18,7 +20,7 @@ MAX(fg_per_36_min) OVER () AS max_fg_per_36_min
 
 
 FROM {{ ref('player_per_36min_played_2014_2024') }}
-WHERE g >10
+WHERE g >15 and season = 2024
 ),
 ranking_global_score 
 AS(
@@ -40,11 +42,7 @@ ROUND(SAFE_DIVIDE(fg_per_36_min,max_fg_per_36_min),2) as fg_per_36_min_ratio
 FROM calcul_ratio)
 
 SELECT 
-TRANSLATE(
-    player, 
-    'ŠšžÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝŸàáâãäåçèéêëìíîïñòóôõöùúûüūÿČčĆćĐđýģņŞğāŽş.', 
-    'SszAAAAAACEEEEIIIINOOOOOUUUUYYaaaaaaceeeeiiiinooooouuuuuyCcCcDdygnSgaZs'
-  ) AS player
+player
 ,season
 ,pos
 ,tm

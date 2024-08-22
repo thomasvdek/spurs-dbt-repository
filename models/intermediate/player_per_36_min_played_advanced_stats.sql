@@ -50,6 +50,7 @@ player
 ,fg_percent
 ,x3p_per_36_min
 ,x3p_percent
+,x2p_per_36_min
 ,x2p_percent
 ,ft_per_36_min
 ,orb_per_36_min
