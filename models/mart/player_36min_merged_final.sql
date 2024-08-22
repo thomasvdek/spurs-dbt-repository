@@ -1,9 +1,35 @@
+-- player_36min_merged_final.sql
+-- {{ config( materialized='table')}}
+
+    -- create or replace table `weighty-flux-428109-e5`.`dbt_spurs_`.`player_36min_merged_final`
+      
+
+    -- OPTIONS()
+    -- as (
+    --   player_36min_merged_final.sql
+
 SELECT
 Player
 ,season
 ,pos
 ,tm
 ,experience
+,fg_per_36_min
+,fga_per_36_min
+,fg_percent
+,x3p_per_36_min
+,x3p_percent
+,x2p_percent
+,ft_per_36_min
+,orb_per_36_min
+,drb_per_36_min
+,trb_per_36_min
+,ast_per_36_min
+,stl_per_36_min
+,blk_per_36_min
+,tov_per_36_min
+,pf_per_36_min
+,pts_per_36_min
 ,PG_global_stats
 ,SG_global_stats
 ,SF_global_stats
@@ -23,3 +49,5 @@ Player
 FROM {{ ref('player_36min_merged') }} AS p36m
 LEFT JOIN {{ ref('Salaries_NBA_players_cleaned') }} AS salaries
 USING(Player)
+
+    -- )

@@ -45,6 +45,22 @@ player
 ,pos
 ,tm
 ,experience
+,fg_per_36_min
+,fga_per_36_min
+,fg_percent
+,x3p_per_36_min
+,x3p_percent
+,x2p_percent
+,ft_per_36_min
+,orb_per_36_min
+,drb_per_36_min
+,trb_per_36_min
+,ast_per_36_min
+,stl_per_36_min
+,blk_per_36_min
+,tov_per_36_min
+,pf_per_36_min
+,pts_per_36_min
 ,ROUND((fg_per_36_min_ratio*fg_percent) + ast_per_36_min_ratio + stl_per_36_min_ratio + (x2p_per_36_min_ratio*x2p_percent) + (x3p_per_36_min_ratio*x3p_percent) - tov_per_36_min_ratio + pts_per_36_min_ratio + ft_per_36_min_ratio,2)  AS PG_global_stats
 ,ROUND((fg_per_36_min_ratio*fg_percent) + stl_per_36_min_ratio + (x2p_per_36_min_ratio*x2p_percent) + (x3p_per_36_min_ratio*x3p_percent) - tov_per_36_min_ratio + pts_per_36_min_ratio + ft_per_36_min_ratio,2)  AS SG_global_stats
 ,ROUND((fg_per_36_min_ratio*fg_percent) + blk_per_36_min_ratio + stl_per_36_min_ratio + (x2p_per_36_min_ratio*x2p_percent) + (x3p_per_36_min_ratio*x3p_percent) + trb_per_36_min_ratio + pts_per_36_min_ratio + ft_per_36_min_ratio,2)  AS SF_global_stats
