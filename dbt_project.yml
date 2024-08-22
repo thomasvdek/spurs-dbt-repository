@@ -35,10 +35,4 @@ clean-targets:         # directories to be removed by `dbt clean`
 # continue to be built as views. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 
-models:
-  spurs:
-    # Applies to all files under models/example/
-    mart:
-      +materialized: table
-      spurs:
-        +schema: spurs_project
+
