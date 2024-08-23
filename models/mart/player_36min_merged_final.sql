@@ -25,7 +25,9 @@ Player
 ,pts_per_36_min
 ,fg_per_36_min_ratio
 ,x3p_per_36_min_ratio
+,x3p_percent_ratio
 ,x2p_per_36_min_ratio
+,x2p_percent_ratio
 ,ft_per_36_min_ratio
 ,orb_per_36_min_ratio
 ,drb_per_36_min_ratio

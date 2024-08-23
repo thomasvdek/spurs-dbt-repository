@@ -6,7 +6,9 @@ AS (
 SELECT *,
 MAX(fg_per_36_min) OVER () AS max_fg_per_36_min
 ,MAX(x3p_per_36_min) OVER () AS max_x3p_per_36_min
+,MAX(x3p_percent) OVER () AS max_x3p_percent
 ,MAX(x2p_per_36_min) OVER () AS max_x2p_per_36_min
+,MAX(x2p_percent) OVER () AS max_x2p_percent
 ,MAX(ft_per_36_min) OVER () AS max_ft_per_36_min
 ,MAX(orb_per_36_min) OVER () AS max_orb_per_36_min
 ,MAX(drb_per_36_min) OVER () AS max_drb_per_36_min
@@ -27,7 +29,9 @@ AS(
 SELECT *,
 ROUND(SAFE_DIVIDE(fg_per_36_min,max_fg_per_36_min),2) as fg_per_36_min_ratio
 ,ROUND(SAFE_DIVIDE(x3p_per_36_min,max_x3p_per_36_min),2) as x3p_per_36_min_ratio
+,ROUND(SAFE_DIVIDE(x3p_percent,max_x3p_percent),2) as x3p_percent_ratio
 ,ROUND(SAFE_DIVIDE(x2p_per_36_min,max_x2p_per_36_min),2) as x2p_per_36_min_ratio
+,ROUND(SAFE_DIVIDE(x2p_percent,max_x2p_percent),2) as x2p_percent_ratio
 ,ROUND(SAFE_DIVIDE(ft_per_36_min,max_ft_per_36_min),2) as ft_per_36_min_ratio
 ,ROUND(SAFE_DIVIDE(orb_per_36_min,max_orb_per_36_min),2) as orb_per_36_min_ratio
 ,ROUND(SAFE_DIVIDE(drb_per_36_min,max_drb_per_36_min),2) as drb_per_36_min_ratio
@@ -66,7 +70,9 @@ player
 ,pts_per_36_min
 ,fg_per_36_min_ratio
 ,x3p_per_36_min_ratio
+,x3p_percent_ratio
 ,x2p_per_36_min_ratio
+,x2p_percent_ratio
 ,ft_per_36_min_ratio
 ,orb_per_36_min_ratio
 ,drb_per_36_min_ratio
