@@ -2,6 +2,7 @@
 
 SELECT
 Player
+,season
 ,DATE(CAST(season AS STRING) || '-01-01') AS date_season
 ,pos
 ,tm
