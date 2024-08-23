@@ -24,5 +24,5 @@ SF_global_stats
 ,pf_per_36_min
 ,pts_per_36_min
 FROM {{ ref('player_per_36_min_played_advanced_stats') }}
-WHERE pos LIKE 'SF%' OR pos LIKE '%SF'
+WHERE (pos LIKE 'SF%' OR pos LIKE '%SF') AND season=2024
 ORDER BY SF_global_stats DESC

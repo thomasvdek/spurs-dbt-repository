@@ -4,8 +4,8 @@ season,
 player,
 pos,
 tm,
-SF_global_stats
-,RANK() OVER (ORDER BY SF_global_stats DESC ) AS ranking_SF
+PG_global_stats
+,RANK() OVER (ORDER BY PG_global_stats DESC ) AS ranking_PG
 ,fg_per_36_min
 ,fga_per_36_min
 ,fg_percent
@@ -24,5 +24,5 @@ SF_global_stats
 ,pf_per_36_min
 ,pts_per_36_min
 FROM {{ ref('player_per_36_min_played_advanced_stats') }}
-WHERE pos LIKE 'SF%' OR pos LIKE '%SF'
-ORDER BY SF_global_stats DESC
+WHERE (pos LIKE 'PG%' OR pos LIKE '%PG') AND season = 2024
+ORDER BY PG_global_stats DESC
