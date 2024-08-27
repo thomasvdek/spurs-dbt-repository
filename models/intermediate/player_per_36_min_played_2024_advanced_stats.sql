@@ -50,6 +50,7 @@ player
 ,season
 ,pos
 ,tm
+,age
 ,experience
 ,fg_per_36_min
 ,fga_per_36_min
