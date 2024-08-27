@@ -3,6 +3,7 @@
 SELECT
 Player
 ,season
+,DATE(CAST(season AS STRING) || '-01-01') AS date_season
 ,pos
 ,tm
 ,experience
@@ -11,6 +12,7 @@ Player
 ,fg_percent
 ,x3p_per_36_min
 ,x3p_percent
+,x2p_per_36_min
 ,x2p_percent
 ,ft_per_36_min
 ,orb_per_36_min
@@ -22,6 +24,21 @@ Player
 ,tov_per_36_min
 ,pf_per_36_min
 ,pts_per_36_min
+,fg_per_36_min_ratio
+,x3p_per_36_min_ratio
+,x3p_percent_ratio
+,x2p_per_36_min_ratio
+,x2p_percent_ratio
+,ft_per_36_min_ratio
+,orb_per_36_min_ratio
+,drb_per_36_min_ratio
+,trb_per_36_min_ratio
+,ast_per_36_min_ratio
+,stl_per_36_min_ratio
+,blk_per_36_min_ratio
+,tov_per_36_min_ratio
+,pf_per_36_min_ratio
+,pts_per_36_min_ratio
 ,PG_global_stats
 ,SG_global_stats
 ,SF_global_stats
